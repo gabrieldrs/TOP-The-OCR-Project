@@ -4,13 +4,6 @@ node_js:
 sudo: required
 dist: trusty
 
-env:
-  global:
-    - APP_NAME=top-the-ocr-project
-    - APP_VERSION="$(git log -n 1 --pretty=format:%h -- .)$RANDOM"
-    - NUMBER_INSTANCES: 1
-    - MEMORY_SIZE: 256M
-
 before_install:
   - chmod +x deployCloudFoundry.sh
 
@@ -36,7 +29,6 @@ deploy:
     skip_cleanup: true
     script: ./deployCloudFoundry.sh
     on:
-      repo: mentoring-projects/TOP-The-OCR-Project
       type: push
       branch:
-        - master
+        - travis_test

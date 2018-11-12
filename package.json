@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "This project is developed in order to explore the current OCR technology capabilities.",
   "main": "index.js",
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  },
   "scripts": {
     "start": "node server.js"
   },

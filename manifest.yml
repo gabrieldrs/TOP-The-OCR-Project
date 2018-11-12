@@ -1,0 +1,6 @@
+---
+applications:
+- name: top-ocr
+  memory: 256M
+  instances: 1
+  command: export PATH=$PATH:$PWD/bin/ && npm start
